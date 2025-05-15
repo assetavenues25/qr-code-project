@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "https://qr-code-project-pria.onrender.com/")
 @RestController
 @RequestMapping("/api/requests")
 public class CustomerRequestController {
