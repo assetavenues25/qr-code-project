@@ -1,13 +1,13 @@
-# Use official OpenJDK image as the base image
-FROM openjdk:17-jdk-slim
+# Use Java 24 image
+FROM openjdk:24-jdk
 
 # Set working directory inside the container
 WORKDIR /app
 
-# Install Maven (required to build the project)
+# Install Maven
 RUN apt-get update && apt-get install -y maven
 
-# Copy the Maven build files and source code
+# Copy the Maven build files and source перес code
 COPY pom.xml .
 COPY mvnw .
 COPY .mvn .mvn
