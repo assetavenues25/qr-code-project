@@ -279,25 +279,25 @@
         loanAgainstSecurities: securityType,
         aacode: AACode
       };
-      fetch('https://qr-backend-0qsl.onrender.com', {
+      fetch('https://qr-backend-0qsl.onrender.com/api/requests', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
-      })
+})
       .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-      })
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+})
       .then(data => {
         alert('Form submitted successfully!');
         document.getElementById('application-form').reset();
         document.getElementById('propertyTypeGroup').style.display = "none";
         document.getElementById('securityTypeGroup').style.display = "none";
-      })
-      .catch(error => {
-        alert('Failed to submit the form. Please try again later.');
-      });
-    });
+})
+.catch(error => {
+  alert('Failed to submit the form. Please try again later.');
+});
+
 
 
 
@@ -399,25 +399,56 @@ if (contactForm) {
         }
 
         if (isValid) {
-            alert('Thank you! Your message has been submitted successfully.');
+            alert('Message submitted successfully!');
             contactForm.reset();
         } else {
-            alert('Please fill in all required fields correctly.');
+            alert('Please fill in all fields correctly.');
         }
     });
+
+    function isValidEmail(email) {
+        // Simple email regex
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function isValidPhone(phone) {
+        // 10-digit phone validation
+        return /^\d{10}$/.test(phone);
+    }
 }
 
-// Email validation helper
-function isValidEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+       // Function to remove all numbers from input (used for Full Name)
+  function removeNumbers(input) {
+    input.value = input.value.replace(/\d/g, ''); // Remove digits
+  }
 
-// Phone validation helper
-function isValidPhone(phone) {
-    const re = /^[0-9]{10}$/;
-    return re.test(String(phone).replace(/[^0-9]/g, ''));
+  // Function to allow only digits (used for Mobile Number)
+  function validateNumber(input) {
+    input.value = input.value.replace(/[^0-9]/g, ''); // Keep only numbers
+    if (input.value.length > 10) {
+      input.value = input.value.slice(0, 10); // Enforce 10-digit max
+    }
+
+    // Show/hide error message
+    const errorMsg = document.getElementById("mobileError");
+    if (input.value.length === 10) {
+      errorMsg.style.display = "none";
+    } else {
+      errorMsg.style.display = "inline";
+    }
+  }
+
+  // Function to reset all dropdowns (called on Profession select change)
+  function resetAllDropdowns() {
+    const selects = document.querySelectorAll('select');
+    selects.forEach(select => {
+      if (select.id !== "profession") {
+        select.selectedIndex = 0;
+      }
+    });
+  }
 }
+    )
 
   </script>
 </body>
