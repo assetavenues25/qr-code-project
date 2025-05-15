@@ -1,4 +1,4 @@
-# Build stage with Maven pre-installed (Java 24 might not have a direct Maven image, so we use a workaround)
+# Build stage with Java 24
 FROM openjdk:24-jdk AS build
 
 # Set working directory inside the container
