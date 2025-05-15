@@ -264,22 +264,28 @@
         loanAgainstSecurities: securityType,
         aacode: AACode
       };
-      fetch("https://qr-backend-0qsl.onrender.com/api/requests", {
-        method: "POST",
-      headers: {
-        "Content-Type": "application/json"
+     fetch("https://qr-backend-0qsl.onrender.com/api/requests", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
   },
-    body: JSON.stringify({
-      name: "...",
-      mobileNumber: "...",
-      email: "...",
-      profession: "...",
-      loanType: "...",
-      aacode: "...",
-      homeLoanType: "...",
-      loanAgainstSecurities: "..."
-  })
+  body: JSON.stringify(data)
 })
+.then(response => {
+  if (!response.ok) throw new Error('Network response was not ok');
+  return response.json();
+})
+.then(responseData => {
+  alert('Form submitted successfully!');
+  document.getElementById('application-form').reset();
+  document.getElementById('propertyTypeGroup').style.display = "none";
+  document.getElementById('securityTypeGroup').style.display = "none";
+})
+.catch(error => {
+  console.error(error);
+  alert('Failed to submit the form. Please try again later.');
+});
+
 
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
