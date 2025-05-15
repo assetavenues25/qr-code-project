@@ -417,6 +417,38 @@ if (contactForm) {
     }
 }
 
+       // Function to remove all numbers from input (used for Full Name)
+  function removeNumbers(input) {
+    input.value = input.value.replace(/\d/g, ''); // Remove digits
+  }
+
+  // Function to allow only digits (used for Mobile Number)
+  function validateNumber(input) {
+    input.value = input.value.replace(/[^0-9]/g, ''); // Keep only numbers
+    if (input.value.length > 10) {
+      input.value = input.value.slice(0, 10); // Enforce 10-digit max
+    }
+
+    // Show/hide error message
+    const errorMsg = document.getElementById("mobileError");
+    if (input.value.length === 10) {
+      errorMsg.style.display = "none";
+    } else {
+      errorMsg.style.display = "inline";
+    }
+  }
+
+  // Function to reset all dropdowns (called on Profession select change)
+  function resetAllDropdowns() {
+    const selects = document.querySelectorAll('select');
+    selects.forEach(select => {
+      if (select.id !== "profession") {
+        select.selectedIndex = 0;
+      }
+    });
+  }
+}
+    )
 
   </script>
 </body>
