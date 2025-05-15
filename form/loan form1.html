@@ -264,7 +264,7 @@
         loanAgainstSecurities: securityType,
         aacode: AACode
       };
-      fetch('http://localhost:8080/api/requests', {
+      fetch('https://qr-backend-0qsl.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
