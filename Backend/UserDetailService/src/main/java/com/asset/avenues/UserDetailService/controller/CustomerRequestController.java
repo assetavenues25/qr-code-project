@@ -80,4 +80,10 @@ public class CustomerRequestController {
         workbook.close();
         outputStream.close();
     }
+
+    // Health check endpoint
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
 }
