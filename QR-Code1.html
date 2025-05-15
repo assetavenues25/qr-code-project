@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Avenues</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="icon" type="images/png" href="images/Logofavi 1.png">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #qrContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .print-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff0000ca;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .print-btn:hover {
+            background-color: #0d023d;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #qrContainer, #qrContainer * {
+                visibility: visible;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application form QR Code</h1>
+        <div id="qrContainer"></div>
+        <button class="print-btn" onclick="window.print()">Print QR Code</button>
+    </div>
+    <script>
+        function generateQR() {
+            let formLink = "http://192.168.119.64:5500/QR-Code/form/loan form1.html"; 
+            let qrContainer = document.getElementById("qrContainer");
+            qrContainer.innerHTML = ""; // Clear previous QR code
+
+            new QRCode(qrContainer, {
+                text: formLink,
+                width: 200,
+                height: 200
+            });
+        }
+
+        // Generate QR Code on page load
+        window.onload = generateQR;
+    </script>
+</body>
+</html>

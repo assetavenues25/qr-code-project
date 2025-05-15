@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asset Avenues Financial Solutions - Your Gateway to Financial Freedom</title>
+  <meta name="description" content="Get the best deals on Personal Loans, Home Loans, Business Loans, Credit Cards and Investment solutions in India with Asset Avenues Financial Solutions." />
+  <meta name="keywords" content="loans, personal loan, home loan, business loan, credit card, investment, financial services, Asset Avenues, india loans" />
+  <meta name="author" content="Asset Avenues" />
+  <meta property="og:title" content="Asset Avenues Financial Solutions" />
+  <meta property="og:description" content="Your trusted partner for all financial solutions in India. Get the best deals on loans, credit cards and investments." />
+  <meta property="og:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%20Avenues%20Logo%20-h2ZVKpBj0verh14do05NpYqMWAovb1.png" />
+  <meta property="og:url" content="https://www.assetavenues.in" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.assetavenues.in" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/QR-Code/images/Logofavi 1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%20Avenues%20Logo%20-h2ZVKpBj0verh14do05NpYqMWAovb1.png" alt="Asset Avenues Financial Solutions Logo" width="100">
+                </a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Our Banking Partners</a></li>
+                    <li><a href="#benefits">Why Choose Us ?</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+  <div class="form-container">
+   
+    <h2>Application Form</h2>
+    <form id="application-form">
+      <div class="form-group">
+        <input type="text" id="fullName" class="form-control" placeholder=" " required oninput="removeNumbers(this)" />
+        <label for="fullName">Full Name</label>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="mobile" class="form-control" placeholder=" " maxlength="10" oninput="validateNumber(this)" required />
+        <label for="mobile">Mobile Number</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" class="form-control" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+      <div class="form-group">
+        <select id="profession" required onchange="resetAllDropdowns()">
+          <option value="" disabled selected>Select Profession</option>
+          <option value="salaried">Salaried</option>
+          <option value="self-employed">Self-Employed</option>
+        </select>
+        <label for="profession">Select Profession</label>
+      </div>
+      <div class="form-group">
+        <select id="loanType" required onchange="checkLoanType()">
+          <option value="" disabled selected>Select Loan Type</option>
+        </select>
+        <label for="loanType">Select Loan Type</label>
+      </div>
+      <div class="form-group" id="propertyTypeGroup" style="display: none;">
+        <select id="propertyType">
+          <option value="" disabled selected>Home Loan Type</option>
+          <option value="Resale">Resale</option>
+          <option value="Builder Purchase">Builder Purchase</option>
+          <option value="Self Construction(Plot + Construction)">Self Construction(Plot + Construction)</option>
+          <option value="BT + Top-up">BT + Top-up</option>
+          <option value="Balance Transfer (BT)">Balance Transfer (BT)</option>
+        </select>
+        <label for="propertyType">Select Property Type</label>
+      </div>
+      <div class="form-group" id="securityTypeGroup" style="display: none;">
+        <select id="securityType">
+          <option value="" disabled selected>Select Security Type</option>
+          <option value="shares">Loan Against Shares</option>
+          <option value="mutualfunds">Loan Against Mutual Funds</option>
+          <option value="bonds">Loan Against Bonds</option>
+        </select>
+        <label for="securityType">Type of Security</label>
+      </div>
+      <div class="forrm-group1">
+        <label for="AACode">AACode</label>
+        <input type="text" id="AACode" class="form-control" value="AAC1" readonly />
+      </div>
+      <button type="submit">Submit <i class="fas fa-arrow-right"></i></button>
+    </form>
+  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                
+                <p>Your trusted partner for all financial solutions. We help you achieve your financial goals with personalized loan options and expert guidance.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61573925998604"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/assetavenues.finance/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Personal Loan</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Credit Card Loan</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Business Loan</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Home Loan</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Loan Against Property</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="pages/terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    <li><a href="pages\terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+                    
+                   
+                </ul>
+            </div>
+        </div>
+
+
+        
+        <div class="copyright">
+            <p>© <script>document.write(new Date().getFullYear())</script> Asset Avenues Financial Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script>
+
+     // Allow only digits in mobile input
+  function validateNumber(input) {
+    input.value = input.value.replace(/\D/g, '').slice(0, 10);
+  }
+
+  // Remove any digits from full name input
+  function removeNumbers(input) {
+    input.value = input.value.replace(/[0-9]/g, '');
+  }
+
+  
+    function resetAllDropdowns() {
+      // Reset loan type dropdown
+      const loanType = document.getElementById("loanType");
+      loanType.innerHTML = '<option value="" disabled selected>Select Loan Type</option>';
+      
+      // Hide and reset property type dropdown
+      document.getElementById("propertyTypeGroup").style.display = "none";
+      document.getElementById("propertyType").selectedIndex = 0;
+      
+      // Hide and reset security type dropdown
+      document.getElementById("securityTypeGroup").style.display = "none";
+      document.getElementById("securityType").selectedIndex = 0;
+      
+      // Update loan options based on new profession selection
+      updateLoanOptions();
+    }
+
+    function updateLoanOptions() {
+      const profession = document.getElementById("profession").value;
+      const loanType = document.getElementById("loanType");
+      let options = [];
+      if (profession === "salaried") {
+        options = [
+          { value: "personal", text: "Personal Loan" },
+          { value: "home", text: "Home Loan" },
+          { value: "card", text: "Credit Card" }
+        ];
+      } else if (profession === "self-employed") {
+        options = [
+          { value: "business", text: "Business Loan" },
+          { value: "property", text: "Loan Against Property" },
+          { value: "card", text: "Credit Card" },
+          { value: "cash", text: "CC/OD" },
+          { value: "home", text: "Home Loan" },
+          { value: "lrd", text: "LRD Lease Rental Discounting" },
+          { value: "securities", text: "Loan Against Securities" },
+          { value: "vehicle", text: "Commercial Vehicle Loan" },
+          { value: "twowheeler", text: "Two Wheeler Loan" },
+          { value: "gold", text: "Gold Loan" },
+          { value: "insurance", text: "Loan Against Insurance Policy" }
+        ];
+      }
+      options.forEach(opt => {
+        const option = document.createElement("option");
+        option.value = opt.value;
+        option.text = opt.text;
+        loanType.appendChild(option);
+      });
+    }
+
+    function checkLoanType() {
+      const loanTypeValue = document.getElementById("loanType").value;
+      document.getElementById("propertyTypeGroup").style.display = loanTypeValue === "home" ? "block" : "none";
+      document.getElementById("securityTypeGroup").style.display = loanTypeValue === "securities" ? "block" : "none";
+      
+      // Reset property and security dropdowns when loan type changes
+      if (loanTypeValue !== "home") {
+        document.getElementById("propertyType").selectedIndex = 0;
+      }
+      if (loanTypeValue !== "securities") {
+        document.getElementById("securityType").selectedIndex = 0;
+      }
+    }
+
+    document.getElementById('application-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const fullName = document.getElementById('fullName').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const profession = document.getElementById('profession').value;
+      const loanType = document.getElementById('loanType').value;
+      const AACode = document.getElementById('AACode').value.trim();
+      const propertyType = document.getElementById('propertyType')?.value || "";
+      const securityType = document.getElementById('securityType')?.value || "";
+
+      const loanTypeMap = {
+        personal: 'Personal Loan',
+        business: 'Business Loan',
+        home: 'Home Loan',
+        property: 'Loan Against Property',
+        card: 'Credit Card'
+      };
+      const loanTypeFullName = loanTypeMap[loanType] || loanType;
+      const data = {
+        name: fullName,
+        mobileNumber: mobile,
+        email: email,
+        profession: profession,
+        loanType: loanTypeFullName,
+        homeLoanType: propertyType,
+        loanAgainstSecurities: securityType,
+        aacode: AACode
+      };
+      fetch('http://localhost:8080/api/requests', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        alert('Form submitted successfully!');
+        document.getElementById('application-form').reset();
+        document.getElementById('propertyTypeGroup').style.display = "none";
+        document.getElementById('securityTypeGroup').style.display = "none";
+      })
+      .catch(error => {
+        alert('Failed to submit the form. Please try again later.');
+      });
+    });
+
+
+
+
+
+
+
+
+
+    // Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const nav = document.querySelector('nav');
+const menuIcon = document.getElementById('menu-icon'); // For icon toggle
+
+mobileMenuBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+
+    // Toggle icon
+    if (nav.classList.contains('active')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    }
+});
+
+// Close mobile menu when clicking on a link
+const navLinks = document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        menuIcon.classList.remove('fa-times'); // Reset icon
+        menuIcon.classList.add('fa-bars');
+    });
+});
+
+// Sticky Header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Contact Form Validation
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const message = document.getElementById('message');
+
+        if (!name.value.trim()) {
+            isValid = false;
+            name.classList.add('invalid');
+        } else {
+            name.classList.remove('invalid');
+        }
+
+        if (!email.value.trim() || !isValidEmail(email.value)) {
+            isValid = false;
+            email.classList.add('invalid');
+        } else {
+            email.classList.remove('invalid');
+        }
+
+        if (!phone.value.trim() || !isValidPhone(phone.value)) {
+            isValid = false;
+            phone.classList.add('invalid');
+        } else {
+            phone.classList.remove('invalid');
+        }
+
+        if (!message.value.trim()) {
+            isValid = false;
+            message.classList.add('invalid');
+        } else {
+            message.classList.remove('invalid');
+        }
+
+        if (isValid) {
+            alert('Thank you! Your message has been submitted successfully.');
+            contactForm.reset();
+        } else {
+            alert('Please fill in all required fields correctly.');
+        }
+    });
+}
+
+// Email validation helper
+function isValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Phone validation helper
+function isValidPhone(phone) {
+    const re = /^[0-9]{10}$/;
+    return re.test(String(phone).replace(/[^0-9]/g, ''));
+}
+
+  </script>
+</body>
+</html>
