@@ -52,13 +52,14 @@
    
     <h2>Application Form</h2>
     <form id="application-form">
-      <div class="form-group">
+     <div class="form-group">
         <input type="text" id="fullName" class="form-control" placeholder=" " required oninput="removeNumbers(this)" />
         <label for="fullName">Full Name</label>
       </div>
       <div class="form-group">
-        <input type="tel" id="mobile" class="form-control" placeholder=" " maxlength="10" oninput="validateNumber(this)" required />
-        <label for="mobile">Mobile Number</label>
+          <input type="text" id="mobile" class="form-control" placeholder=" " maxlength="10" oninput="validateNumber(this)" required />
+          <label for="mobile">Mobile Number</label>
+          <small id="mobileError" style="color: red; display: none;">Only 10 digits allowed</small>
       </div>
       <div class="form-group">
         <input type="email" id="email" class="form-control" placeholder=" " required />
@@ -82,10 +83,10 @@
         <select id="propertyType">
           <option value="" disabled selected>Home Loan Type</option>
           <option value="Resale">Resale</option>
-          <option value="Builder Purchase">Builder Purchase</option>
-          <option value="Self Construction(Plot + Construction)">Self Construction(Plot + Construction)</option>
-          <option value="BT + Top-up">BT + Top-up</option>
-          <option value="Balance Transfer (BT)">Balance Transfer (BT)</option>
+          <option value="Builder">Builder Purchase</option>
+          <option value="self-Construction">Self Construction(Plot + Construction )</option>
+          <option value="BT">BT + Top-up</option>
+          <option value="BT">Balance Transfer (BT)</option>
         </select>
         <label for="propertyType">Select Property Type</label>
       </div>
@@ -100,7 +101,7 @@
       </div>
       <div class="forrm-group1">
         <label for="AACode">AACode</label>
-        <input type="text" id="AACode" class="form-control" value="AAC1" readonly />
+        <input type="text" id="AACode" class="form-control" value="AAC2" readonly />
       </div>
       <button type="submit">Submit <i class="fas fa-arrow-right"></i></button>
     </form>
@@ -158,19 +159,33 @@
         </div>
     </footer>
 
+
   <script>
-
-     // Allow only digits in mobile input
-  function validateNumber(input) {
-    input.value = input.value.replace(/\D/g, '').slice(0, 10);
-  }
-
-  // Remove any digits from full name input
+  // Prevent digits in full name
   function removeNumbers(input) {
     input.value = input.value.replace(/[0-9]/g, '');
   }
 
-  
+  // Allow only digits in mobile number
+  function validateNumber(input) {
+    input.value = input.value.replace(/\D/g, '').slice(0, 10);
+  }
+
+  // Form validation before submission
+  function validateForm() {
+    const mobile = document.getElementById("mobile").value;
+    const error = document.getElementById("mobileError");
+
+    if (mobile.length !== 10) {
+      error.style.display = "inline";
+      return false; // Prevent form submission
+    } else {
+      error.style.display = "none";
+      return true; // Allow submission
+    }
+  }
+
+
     function resetAllDropdowns() {
       // Reset loan type dropdown
       const loanType = document.getElementById("loanType");
@@ -269,22 +284,6 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-      })
-      .then(data => {
-        alert('Form submitted successfully!');
-        document.getElementById('application-form').reset();
-        document.getElementById('propertyTypeGroup').style.display = "none";
-        document.getElementById('securityTypeGroup').style.display = "none";
-      })
-      .catch(error => {
-        alert('Failed to submit the form. Please try again later.');
-      });
-    });
-
-
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
