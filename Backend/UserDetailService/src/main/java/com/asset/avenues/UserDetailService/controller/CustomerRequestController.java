@@ -28,20 +28,17 @@ public class CustomerRequestController {
         return service.saveRequest(request);
     }
 
-    // Get all users
     @GetMapping("/getAllUsers")
     public List<User> getAllUsers() {
         return service.getAllUsers();
     }
 
-    // Get user by ID
     @GetMapping("/getUserById/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         Optional<User> user = service.getUserById(id);
         return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Export users to Excel
     @GetMapping("/exportUsers")
     public void exportUsersToExcel(HttpServletResponse response) throws IOException {
         List<User> users = service.getAllUsers();
@@ -80,14 +77,4 @@ public class CustomerRequestController {
         workbook.close();
         outputStream.close();
     }
-
-   @RestController
-public class TestController {
-
-    @GetMapping("/ping")
-    public String ping() {
-        return "pong";
-    }
-}
-
 }
