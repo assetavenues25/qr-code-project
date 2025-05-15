@@ -1,23 +1,29 @@
-# Use Java 24 image
+# Build stage with Maven pre-installed (Java 24 might not have a direct Maven image, so we use a workaround)
+FROM openjdk:24-jdk AS build
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy the Maven wrapper and project files
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+COPY src src
+
+# Make mvnw executable
+RUN chmod +x mvnw
+
+# Build the application using Maven Wrapper
+RUN ./mvnw clean package -DskipTests
+
+# Runtime stage
 FROM openjdk:24-jdk
 
 # Set working directory inside the container
 WORKDIR /app
 
-# Install Maven
-RUN apt-get update && apt-get install -y maven
-
-# Copy the Maven build files and source перес code
-COPY pom.xml .
-COPY mvnw .
-COPY .mvn .mvn
-COPY src src
-
-# Build the application using Maven
-RUN mvn clean package -DskipTests
-
-# Copy the built JAR file to the container
-COPY target/*.jar app.jar
+# Copy the built JAR file from the build stage
+COPY --from=build /app/target/*.jar app.jar
 
 # Expose the port your Spring Boot app runs on
 EXPOSE 10000
