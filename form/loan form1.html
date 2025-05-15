@@ -264,11 +264,23 @@
         loanAgainstSecurities: securityType,
         aacode: AACode
       };
-      fetch('https://qr-backend-0qsl.onrender.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
+      fetch("https://qr-backend-0qsl.onrender.com/api/requests", {
+        method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+  },
+    body: JSON.stringify({
+      name: "...",
+      mobileNumber: "...",
+      email: "...",
+      profession: "...",
+      loanType: "...",
+      aacode: "...",
+      homeLoanType: "...",
+      loanAgainstSecurities: "..."
+  })
+})
+
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
