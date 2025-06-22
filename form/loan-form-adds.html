@@ -22,44 +22,39 @@
 </head>
 <body>
   <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%20Avenues%20Logo%20-h2ZVKpBj0verh14do05NpYqMWAovb1.png" alt="Asset Avenues Financial Solutions Logo" width="100">
-                </a>
-            </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars" id="menu-icon"></i>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Our Banking Partners</a></li>
-                    <li><a href="#benefits">Why Choose Us ?</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                  
-                    
-                </ul>
-            </nav>
-            
-        </div>
-    </header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%20Avenues%20Logo%20-h2ZVKpBj0verh14do05NpYqMWAovb1.png" alt="Asset Avenues Financial Solutions Logo" width="100">
+        </a>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars" id="menu-icon"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Our Banking Partners</a></li>
+          <li><a href="#benefits">Why Choose Us ?</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <div class="form-container">
-   
     <h2>Application Form</h2>
     <form id="application-form">
-     <div class="form-group">
+      <div class="form-group">
         <input type="text" id="fullName" class="form-control" placeholder=" " required oninput="removeNumbers(this)" />
         <label for="fullName">Full Name</label>
       </div>
       <div class="form-group">
-          <input type="text" id="mobile" class="form-control" placeholder=" " maxlength="10" oninput="validateNumber(this)" required />
-          <label for="mobile">Mobile Number</label>
-          <small id="mobileError" style="color: red; display: none;">Only 10 digits allowed</small>
+        <input type="text" id="mobile" class="form-control" placeholder=" " maxlength="10" oninput="validateNumber(this)" required />
+        <label for="mobile">Mobile Number</label>
+        <small id="mobileError" style="color: red; display: none;">Please enter exactly 10 digits</small>
       </div>
       <div class="form-group">
         <input type="email" id="email" class="form-control" placeholder=" " required />
@@ -100,106 +95,93 @@
         <label for="securityType">Type of Security</label>
       </div>
       <div class="forrm-group1">
-        <label for="AACode">AACode</label>
-        <input type="text" id="AACode" class="form-control" value="Ad's" readonly />
+        <label for="AACode">Promo Code</label>
+        <input type="text" id="AACode" class="form-control" required />
       </div>
       <button type="submit">Submit <i class="fas fa-arrow-right"></i></button>
     </form>
   </div>
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-about">
-                
-                <p>Your trusted partner for all financial solutions. We help you achieve your financial goals with personalized loan options and expert guidance.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61573925998604"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/assetavenues.finance/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    
-                </div>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Personal Loan</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Credit Card Loan</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Business Loan</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Home Loan</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Loan Against Property</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    <li><a href="pages/terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                    <li><a href="pages\terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
-                    
-                   
-                </ul>
-            </div>
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-about">
+        <p>Your trusted partner for all financial solutions. We help you achieve your financial goals with personalized loan options and expert guidance.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61573925998604"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/assetavenues.finance/"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
-
-
-        
-        <div class="copyright">
-            <p>© <script>document.write(new Date().getFullYear())</script> Asset Avenues Financial Solutions. All rights reserved.</p>
-        </div>
-    </footer>
-
-
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+          <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+          <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Personal Loan</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Credit Card Loan</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Business Loan</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Home Loan</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Loan Against Property</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+          <li><a href="pages/terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="pages/terms-and-conditions.html"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© <script>document.write(new Date().getFullYear())</script> Asset Avenues Financial Solutions. All rights reserved.</p>
+    </div>
+  </footer>
   <script>
-  // Prevent digits in full name
-  function removeNumbers(input) {
-    input.value = input.value.replace(/[0-9]/g, '');
-  }
-
-  // Allow only digits in mobile number
-  function validateNumber(input) {
-    input.value = input.value.replace(/\D/g, '').slice(0, 10);
-  }
-
-  // Form validation before submission
-  function validateForm() {
-    const mobile = document.getElementById("mobile").value;
-    const error = document.getElementById("mobileError");
-
-    if (mobile.length !== 10) {
-      error.style.display = "inline";
-      return false; // Prevent form submission
-    } else {
-      error.style.display = "none";
-      return true; // Allow submission
+    // Prevent digits in full name
+    function removeNumbers(input) {
+      input.value = input.value.replace(/\d/g, '');
     }
-  }
 
+    // Allow only digits in mobile number
+    function validateNumber(input) {
+      input.value = input.value.replace(/[^0-9]/g, '').slice(0, 10);
+      const errorMsg = document.getElementById("mobileError");
+      if (input.value.length !== 10) {
+        errorMsg.style.display = "inline";
+      } else {
+        errorMsg.style.display = "none";
+      }
+    }
+
+    // Form validation before submission
+    function validateForm() {
+      const mobile = document.getElementById("mobile").value;
+      const error = document.getElementById("mobileError");
+      if (mobile.length !== 10) {
+        error.style.display = "inline";
+        return false; // Prevent form submission
+      } else {
+        error.style.display = "none";
+        return true; // Allow submission
+      }
+    }
 
     function resetAllDropdowns() {
-      // Reset loan type dropdown
       const loanType = document.getElementById("loanType");
       loanType.innerHTML = '<option value="" disabled selected>Select Loan Type</option>';
-      
-      // Hide and reset property type dropdown
       document.getElementById("propertyTypeGroup").style.display = "none";
       document.getElementById("propertyType").selectedIndex = 0;
-      
-      // Hide and reset security type dropdown
       document.getElementById("securityTypeGroup").style.display = "none";
       document.getElementById("securityType").selectedIndex = 0;
-      
-      // Update loan options based on new profession selection
       updateLoanOptions();
     }
 
@@ -240,8 +222,6 @@
       const loanTypeValue = document.getElementById("loanType").value;
       document.getElementById("propertyTypeGroup").style.display = loanTypeValue === "home" ? "block" : "none";
       document.getElementById("securityTypeGroup").style.display = loanTypeValue === "securities" ? "block" : "none";
-      
-      // Reset property and security dropdowns when loan type changes
       if (loanTypeValue !== "home") {
         document.getElementById("propertyType").selectedIndex = 0;
       }
@@ -252,6 +232,9 @@
 
     document.getElementById('application-form').addEventListener('submit', function (event) {
       event.preventDefault();
+      if (!validateForm()) {
+        return; // Stop if validation fails
+      }
       const fullName = document.getElementById('fullName').value.trim();
       const mobile = document.getElementById('mobile').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -260,7 +243,6 @@
       const AACode = document.getElementById('AACode').value.trim();
       const propertyType = document.getElementById('propertyType')?.value || "";
       const securityType = document.getElementById('securityType')?.value || "";
-
       const loanTypeMap = {
         personal: 'Personal Loan',
         business: 'Business Loan',
@@ -283,173 +265,116 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
-})
-      .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.json();
-})
-      .then(data => {
-        alert('Form submitted successfully!');
-        document.getElementById('application-form').reset();
-        document.getElementById('propertyTypeGroup').style.display = "none";
-        document.getElementById('securityTypeGroup').style.display = "none";
-})
-.catch(error => {
-  alert('Failed to submit the form. Please try again later.');
-});
-
-
-
-
-
-
-
-
-
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          alert('Form submitted successfully!');
+          document.getElementById('application-form').reset();
+          document.getElementById('propertyTypeGroup').style.display = "none";
+          document.getElementById('securityTypeGroup').style.display = "none";
+        })
+        .catch(error => {
+          alert('Failed to submit the form. Please try again later.');
+        });
+    });
 
     // Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const nav = document.querySelector('nav');
-const menuIcon = document.getElementById('menu-icon'); // For icon toggle
-
-mobileMenuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-
-    // Toggle icon
-    if (nav.classList.contains('active')) {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    const menuIcon = document.getElementById('menu-icon');
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      if (nav.classList.contains('active')) {
         menuIcon.classList.remove('fa-bars');
         menuIcon.classList.add('fa-times');
-    } else {
+      } else {
         menuIcon.classList.remove('fa-times');
         menuIcon.classList.add('fa-bars');
-    }
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('nav ul li a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        menuIcon.classList.remove('fa-times'); // Reset icon
-        menuIcon.classList.add('fa-bars');
+      }
     });
-});
 
-// Sticky Header
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0);
-});
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    // Sticky Header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-
         if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
         }
+      });
     });
-});
 
-// Contact Form Validation
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    // Contact Form Validation
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
         let isValid = true;
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const phone = document.getElementById('phone');
         const message = document.getElementById('message');
-
         if (!name.value.trim()) {
-            isValid = false;
-            name.classList.add('invalid');
+          isValid = false;
+          name.classList.add('invalid');
         } else {
-            name.classList.remove('invalid');
+          name.classList.remove('invalid');
         }
-
         if (!email.value.trim() || !isValidEmail(email.value)) {
-            isValid = false;
-            email.classList.add('invalid');
+          isValid = false;
+          email.classList.add('invalid');
         } else {
-            email.classList.remove('invalid');
+          email.classList.remove('invalid');
         }
-
         if (!phone.value.trim() || !isValidPhone(phone.value)) {
-            isValid = false;
-            phone.classList.add('invalid');
+          isValid = false;
+          phone.classList.add('invalid');
         } else {
-            phone.classList.remove('invalid');
+          phone.classList.remove('invalid');
         }
-
         if (!message.value.trim()) {
-            isValid = false;
-            message.classList.add('invalid');
+          isValid = false;
+          message.classList.add('invalid');
         } else {
-            message.classList.remove('invalid');
+          message.classList.remove('invalid');
         }
-
         if (isValid) {
-            alert('Message submitted successfully!');
-            contactForm.reset();
+          alert('Message submitted successfully!');
+          contactForm.reset();
         } else {
-            alert('Please fill in all fields correctly.');
+          alert('Please fill in all fields correctly.');
         }
-    });
-
-    function isValidEmail(email) {
-        // Simple email regex
+      });
+      function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    function isValidPhone(phone) {
-        // 10-digit phone validation
-        return /^\d{10}$/.test(phone);
-    }
-}
-
-       // Function to remove all numbers from input (used for Full Name)
-  function removeNumbers(input) {
-    input.value = input.value.replace(/\d/g, ''); // Remove digits
-  }
-
-  // Function to allow only digits (used for Mobile Number)
-  function validateNumber(input) {
-    input.value = input.value.replace(/[^0-9]/g, ''); // Keep only numbers
-    if (input.value.length > 10) {
-      input.value = input.value.slice(0, 10); // Enforce 10-digit max
-    }
-
-    // Show/hide error message
-    const errorMsg = document.getElementById("mobileError");
-    if (input.value.length === 10) {
-      errorMsg.style.display = "none";
-    } else {
-      errorMsg.style.display = "inline";
-    }
-  }
-
-  // Function to reset all dropdowns (called on Profession select change)
-  function resetAllDropdowns() {
-    const selects = document.querySelectorAll('select');
-    selects.forEach(select => {
-      if (select.id !== "profession") {
-        select.selectedIndex = 0;
       }
-    });
-  }
-}
-    )
-
+      function isValidPhone(phone) {
+        return /^\d{10}$/.test(phone);
+      }
+    }
   </script>
 </body>
 </html>
