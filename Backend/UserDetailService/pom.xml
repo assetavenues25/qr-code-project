@@ -18,8 +18,8 @@
     <description>Asset Avenues</description>
 
     <properties>
-        <java.version>21</java.version>
-        <maven.compiler.release>21</maven.compiler.release>
+        <java.version>24</java.version>
+        <maven.compiler.release>24</maven.compiler.release>
     </properties>
 
     <dependencies>
@@ -71,9 +71,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.0</version>
                 <configuration>
-                    <release>21</release>
-                    <source>21</source>
-                    <target>21</target>
+                    <release>24</release>
+                    <source>24</source>
+                    <target>24</target>
                 </configuration>
             </plugin>
         </plugins>
