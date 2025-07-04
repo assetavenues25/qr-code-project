@@ -1,5 +1,5 @@
 # Build stage with Java 24
-FROM openjdk:21-jdk AS build
+FROM openjdk:24-jdk AS build
 
 # Set working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Runtime stage
-FROM openjdk:21-jdk
+FROM openjdk:24-jdk
 
 # Set working directory inside the container
 WORKDIR /app
