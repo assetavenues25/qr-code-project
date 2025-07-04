@@ -1,32 +1,24 @@
-# Build stage with Java 24
+# ------------ Build Stage ------------
 FROM openjdk:24-jdk AS build
 
-# Set working directory inside the container
 WORKDIR /app
 
-# Copy the Maven wrapper and project files
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
+RUN ./mvnw dependency:go-offline -B  # Pre-fetch dependencies
+
 COPY src src
-
-# Make mvnw executable
 RUN chmod +x mvnw
-
-# Build the application using Maven Wrapper
 RUN ./mvnw clean package -DskipTests
 
-# Runtime stage
-FROM openjdk:24-jdk
+# ------------ Runtime Stage ------------
+FROM eclipse-temurin:24-jdk-alpine  # Lighter final image
 
-# Set working directory inside the container
 WORKDIR /app
 
-# Copy the built JAR file from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Expose the port your Spring Boot app runs on
 EXPOSE 8080
 
-# Command to run the application
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
